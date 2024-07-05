@@ -1,0 +1,338 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --bg-white: #fff;
+    --bg-light: #faf8ff;
+    --bg-black: #000;
+    --bg-grey: #eee;
+    --gradient: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+
+    /* Text color */
+    --primary-text: #4C3BCF;
+    --secondary-text: #E6B9A6;
+    --text-white: #fff;
+    --text-black: #000;
+    --text-grey: #6e6d6d;
+
+    /* Font-family */
+    --primary-font: 'Rubik', sans-serif;
+    --secondary-font: 'Rubik', sans-serif;
+
+}
+
+body {
+    font-family: var(--secondary-font);
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* Custom CSS */
+
+a {
+    text-decoration: none;
+    /* to hide line  */
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-grey);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.main-btn {
+    display: inline-block;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 2.300rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+    border: double 0.125rem transparent;
+    padding: 0 1.000rem;
+    transition: all .3s ease-in-out;
+    --webkit-transition: all .3s ease-in-out;
+}
+
+.primary-btn {
+    background-image: var(--gradient);
+    color: var(--text-white);
+}
+
+.primary-btn:hover {
+    border-color: var(--bg-black);
+    background: var(--bg-white);
+    color: var(--bg-black);
+    box-shadow: none;
+}
+
+.secondary-btn {
+    background-image: var(--bg-white);
+    color: var(--primary-text);
+    border-color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background: var(--gradient);
+    color: var(--text-white);
+    box-shadow: none;
+}
+
+h1 {
+    font-size: 2.375rem;
+    line-height: 3.75rem;
+    font-weight: 400;
+    color: var(--primary-text);
+    font-family: var(--primary-font);
+}
+
+h2 {
+    font-size: 2.0rem;
+    line-height: 3.4375rem;
+    font-weight: 450;
+    color: var(--text-black);
+    margin-bottom: 1.5625rem;
+    font-family: var(--primary-font);
+}
+
+h3 {
+    font-size: 1.0rem;
+    line-height: 3.125rem;
+    font-weight: 400;
+    color: var(--text-black);
+    font-family: var(--primary-font);
+}
+
+h5 {
+    font-size: 1.0rem;
+    line-height: 3.125rem;
+    font-weight: 500;
+    color: var(--text-black);
+
+}
+
+p {
+    font-size: 0.9375rem;
+    line-height: 1.425rem;
+    font-weight: 400;
+    color: var(--text-grey);
+}
+li
+{
+    font-size: 0.800rem;
+    line-height: 1.425rem;
+    font-weight: 400;
+    color: white;
+}
+
+/* Navbar */
+.header-wrapper .navbar {
+    padding: 0.9375rem 0;
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.header-wrapper .navbar-brand{
+    color: var(--primary-text);
+    font-size: 1.100rem;
+    font-weight: 500;
+    font-family: var(--primary-font);
+}
+
+.header-wrapper .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.header-wrapper .nav-item {
+    margin: 0 0.625rem;
+}
+
+.header-wrapper .nav-item .nav-link {
+    /*  To display the nav item */
+    font-family: var(--primary-font);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-right: -1.2rem;
+    color: var(--primary-text);
+    display: inline-block;
+}
+
+.header-wrapper .nav-item .nav-link.active,
+/* This part used for hover and active link, when we click on the link it change the color*/
+.header-wrapper .nav-item .nav-link:hover {
+    color:var(--bg-black) ;
+}
+
+.header-scrolled {
+    /* fixed header section when we scroll the websit then header part still fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 14%;
+    width: 100%;
+    background-color: var(--bg-white);
+    -webkit-box-shadow: 0 0.25rem 0.375rem rgba(12, 0, 46, .85);
+    box-shadow: 0 0.25rem 0.375rem rgba(12, 0, 46, .85);
+}
+
+/* Banner */
+.banner-wrapper {
+    padding-top: 6.875rem;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.banner-wrapper .banner-content {
+    vertical-align: middle;
+    align-self: center;
+    margin-bottom: 3rem;
+}
+
+.banner-wrapper img{
+    max-width: 120%;
+    max-height: auto;
+    margin-top: 4rem;
+    margin-left: -2rem;
+}
+
+.features-wrapper .about-content h3{
+    margin-bottom: -0.5rem;
+}
+
+.features-wrapper .about-content .i1 {
+    color: #854fee;
+}
+
+.features-wrapper .container .g1{
+    max-width: 70%;
+    margin-left: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+}
+
+.features-wrapper .container .g2 {
+    max-width: 115%;
+    max-height: 150%;
+    margin-bottom: 12rem;
+}
+
+.features-wrapper .container .g3 {
+    max-width: 70%;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}
+
+.product-wrapper .card{
+    max-width: 85%;
+    align-items: center;
+    display: inline-flex;
+    margin-left: 2rem;
+}
+.product-wrapper .card-title{
+    font-size:1rem;
+    margin-bottom: 0rem;
+}
+.product-wrapper .card-text{
+    font-size: 0.800rem;
+}
+
+/* contact */
+
+
+.contact-wrapper .container {
+    background-color: #fff;
+    padding: 30px;
+
+}
+
+.contact-wrapper .h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper .container .contact-content{
+    margin-top: 5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.contact-wrapper .textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-wrapper button {
+    text-align: center;
+    background-color: var(--primary-text);
+    color: white;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.contact-wrapper button:hover {
+    background-color:var(--primary-text);
+}
+/*FOOTER*/
+
+footer {
+    background: linear-gradient(-255deg, #854fee 0%, #5523bb 48%, #5523bb 100%);
+    color: white;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 20px;
+}
+
+footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+}
+
+
+footer a:hover {
+    color: var(--bg-black);
+    text-decoration: none;
+}
+
+.footer-middle {
+    padding-top: 2em;
+    color: white;
+}
